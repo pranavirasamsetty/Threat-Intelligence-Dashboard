@@ -11,12 +11,14 @@
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd threat-intelligence-dashboard
+git clone https://github.com/pranavirasamsetty/Threat-Intelligence-Dashboard.git
+cd Threat-Intelligence-Dashboard
 ```
 
-### 2. Add CSV dataset
-Place the Kaggle dataset CSV (`threat-data.csv`) into `backend/`
+### 2. Download CSV dataset from Kaggle
+- Dataset link: https://www.kaggle.com/datasets/hussainsheikh03/nlp-based-cyber-security-dataset
+- Download and rename the CSV to `threat-data.csv`
+- Place it inside the `backend/` folder
 
 ### 3. Train ML model
 ```bash
@@ -34,10 +36,10 @@ docker-compose up --build
 - Backend API: http://localhost:5000/api/threats
 
 ## 🧪 Test Endpoints
-- `/api/threats`
-- `/api/threats/:id`
-- `/api/threats/stats`
-- `/api/analyze` (POST: `{ "description": "some text" }`)
+- `GET /api/threats`
+- `GET /api/threats/:id`
+- `GET /api/threats/stats`
+- `POST /api/analyze` (Payload: `{ "description": "some text" }`)
 
 ## 👨‍💻 Author
 Pranavi Rasamsetty
